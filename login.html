@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Slide Navbar</title>
+    <title>CactiCards Login</title>
     <link rel="stylesheet" type="text/css" href="css/slide navbar style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
@@ -35,7 +35,6 @@
     register_form.addEventListener('submit', async (e) => {
         e.preventDefault();
         console.log('Submitting...');
-        console.log(e)
         try {
             const response = await fetch('/register', {
                 method: 'POST',
