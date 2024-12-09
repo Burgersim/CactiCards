@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of all Cards</title>
+</head>
+<body>
+<h1>List of available Cards</h1>
+<p>The following Cards are available in the Database:</p>
+<div id="cards_list"></div>
+<script>
+    // fetch data via requests
+    fetch('/cards')
+        .then(response => response.json())
+        .then(data => {
+            const cardList = data.map(
+                card => `<li>${card.card_id}: ${card.card_name}</li>`
+            ).join('');
+            document.getElementById('cards_list').innerHTML = `<ul>${cardList}</ul>`;
+        })
+        .catch(error => console.error('Error occurred:', error));
+</script>
+
+</body>
+</html>
