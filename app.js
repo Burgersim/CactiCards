@@ -2,6 +2,9 @@ const express = require('express');
 const {Pool} = require('pg');
 const path = require('path');
 const BodyParser = require('body-parser');
+const morgan = require('morgan');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 const app = express();
 const port = 3000;
@@ -17,12 +20,13 @@ const pool = new Pool({
 app.use(express.static(path.join('')));
 app.use(BodyParser.urlencoded({extended: false}));
 
+//Middleware to pass json bodies
+app.use(express.json());
+app.use(morgan('dev'));
+
 // Setup Route Handler
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
-});
-app.get('/cardList', (req, res) => {
-    res.sendFile(path.join(__dirname, 'cardList.html'));
 });
 
 // Route Handler to get List of Cards
@@ -39,6 +43,23 @@ app.get('/cards', (req, res) => {
         }
     });
 });
+
+// Route Handler for registering new users
+app.post('/register', async (req, res) => {
+    const user = req.body;
+
+    // Hash user's password, and set hashed password as user's password in the request
+    user.password = bcrypt.hashSync(user.password, saltRounds);
+
+    try {
+        const query = 'INSERT INTO users (username, email, pass) VALUES ($1, $2, $3) RETURNING *'
+        const values = [user.username, user.email, user.password];
+        const result = await pool.query(query, values);
+        res.json(result.rows[0]);
+    } catch(err) {
+        console.error('Error occurred:', err);
+        res.status(500).send('An error occurred while registering the user.');}
+})
 
 // Listening to requests
 app.listen(port, () => {
