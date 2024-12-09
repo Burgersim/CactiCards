@@ -29,6 +29,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Route Handler to Login/Register Page
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'login.html'));
+});
+
 // Route Handler to get List of Cards
 app.get('/cards', (req, res) => {
     const query = 'SELECT * FROM cards';
