@@ -35,18 +35,21 @@
     register_form.addEventListener('submit', async (e) => {
         e.preventDefault();
         console.log('Submitting...');
-        console.log({
+        console.log(JSON.stringify({
             username: document.getElementById('reg_username').value,
             email: document.getElementById('reg_email').value,
             password: document.getElementById('reg_pass').value,
-        })
+        }))
         try {
             const response = await fetch('/register', {
                 method: 'POST',
-                body: {
+                body: JSON.stringify({
                     username: document.getElementById('reg_username').value,
                     email: document.getElementById('reg_email').value,
                     password: document.getElementById('reg_pass').value,
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
                 }
             });
             console.log('Completed!', response);
