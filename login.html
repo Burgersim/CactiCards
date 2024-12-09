@@ -12,9 +12,9 @@
     <div class="signup">
         <form>
             <label for="chk" aria-hidden="true">Sign up</label>
-            <input type="text" name="txt" placeholder="User name" required="">
-            <input type="email" name="email" placeholder="Email" required="">
-            <input type="password" name="pass" placeholder="Password" required="">
+            <input id="reg_username" type="text" name="txt" placeholder="User name" required>
+            <input id="reg_email" type="email" name="email" placeholder="Email" required>
+            <input id="reg_pass" type="password" name="pass" placeholder="Password" required>
             <button id="register_button">Sign up</button>
         </form>
     </div>
@@ -37,9 +37,9 @@
             const response = await fetch('/register', {
                 method: 'POST',
                 body: JSON.stringify({
-                    email: document.querySelector('input[name="email"]').value,
-                    password: document.querySelector('input[name="pass"]').value,
-                    username: document.querySelector('input[name="txt"]').value
+                    username: document.getElementById('reg_username').value,
+                    email: document.getElementById('reg_email').value,
+                    password: document.getElementById('reg_pass').value,
                 })
             });
             console.log('Completed!', response);
