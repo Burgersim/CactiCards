@@ -117,6 +117,7 @@ button:hover{
     background-color: var(--grey-color);
     overflow: hidden;
     border-radius: 20px;
+    display: inline-block;
 }
 
 /* Style the links inside the navigation bar */
@@ -140,9 +141,4 @@ button:hover{
 .topnav a.active {
     background-color: var(--secondary-contrast-color);
     color: white;
-}
-
-#nav ul{
-    display: inline-block;
-    list-style: none;
 }
