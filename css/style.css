@@ -20,7 +20,6 @@ body{
     background: linear-gradient(to bottom, var(--main-color), var(--secondary-color), var(--tertiary-color));
     color: #fff;
     font-family: var(--main-font), sans-serif;
-    z-index: -1;
 }
 
 .login_body{
@@ -35,7 +34,6 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    z-index: 0;
 }
 
 .main{
@@ -124,7 +122,6 @@ button:hover{
     background-color: var(--grey-color);
     overflow: hidden;
     border-radius: 15px;
-    z-index: 1;
 }
 
 /* Style the links inside the navigation bar */
