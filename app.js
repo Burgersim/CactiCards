@@ -51,6 +51,7 @@ app.get('/cards', (req, res) => {
 
 // Route Handler for registering new users
 app.post('/register', async (req, res) => {
+    console.log(req.body);
     const user = req.body;
 
     // Hash user's password, and set hashed password as user's password in the request
