@@ -141,3 +141,8 @@ button:hover{
     background-color: var(--secondary-contrast-color);
     color: white;
 }
+
+#nav ul{
+    display: inline-block;
+    list-style: none;
+}
