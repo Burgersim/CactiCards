@@ -67,6 +67,22 @@ app.post('/register', async (req, res) => {
         res.status(500).send('An error occurred while registering the user.');}
 })
 
+// Route Handler for Logging in
+app.post('/login', async (req, res) => {
+    console.log("Login Request:", req.body);
+    const user = req.body;
+
+    try{
+        const query = 'SELECT * FROM users WHERE username = $1'
+        const values = [user.username];
+        const result = await pool.query(query, values);
+        console.log("Result:", result.rows[0]);
+    } catch(err) {
+        console.error('Error occurred:', err);
+        res.status(500).send('An error occurred while logging in the user.');
+    }
+})
+
 // Listening to requests
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
