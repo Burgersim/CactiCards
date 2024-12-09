@@ -1,4 +1,4 @@
-body{
+.login_body{
     margin: 0;
     padding: 0;
     display: flex;
@@ -88,6 +88,7 @@ button:hover{
 #chk:checked ~ .signup label{
     transform: scale(.6);
 }
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;

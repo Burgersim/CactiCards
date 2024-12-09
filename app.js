@@ -73,8 +73,8 @@ app.post('/login', async (req, res) => {
     const user = req.body;
 
     try{
-        const query = 'SELECT * FROM users WHERE username = $1'
-        const values = [user.username];
+        const query = 'SELECT * FROM users WHERE email = $1'
+        const values = [user.email];
         const result = await pool.query(query, values);
         console.log("Result:", result.rows[0]);
     } catch(err) {
