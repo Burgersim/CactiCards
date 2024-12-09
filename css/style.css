@@ -11,7 +11,16 @@
 }
 
 body{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: var(--main-color);
+    color: #fff;
     font-family: var(--main-font), sans-serif;
+    z-index: -1;
 }
 
 .login_body{
@@ -26,9 +35,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: var(--main-font), sans-serif;
-    background: linear-gradient(to bottom, var(--main-color), var(--secondary-color), var(--tertiary-color));
-    z-index: -1;
+    z-index: 1;
 }
 
 .main{
@@ -116,10 +123,10 @@ button:hover{
 .topnav {
     background-color: var(--grey-color);
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 15px;
     display: inline-block;
     width: 100%;
-    margin: 5px auto;
+    margin: auto;
 }
 
 /* Style the links inside the navigation bar */
