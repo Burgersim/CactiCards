@@ -1,5 +1,17 @@
+:root{
+    --main-color: #0f0c29;
+    --secondary-color: #302b63;
+    --tertiary-color: #24243e;
+    --grey-color: #333;
+    --main-contrast-color: #6d44b8;
+    --secondary-contrast-color: #573b8a;
+    --tertiary-contrast-color: #eee;
+    --main-font: 'Jost', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+}
+
 body{
-    font-family: 'Jost', sans-serif;
+    font-family: var(--main-font), sans-serif;
 }
 
 .login_body{
@@ -14,8 +26,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: 'Jost', sans-serif;
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    font-family: var(--main-font), sans-serif;
+    background: linear-gradient(to bottom, var(--main-color), var(--secondary-color), var(--tertiary-color));
     z-index: -1;
 }
 
@@ -65,7 +77,7 @@ button{
     justify-content: center;
     display: block;
     color: #fff;
-    background: #573b8a;
+    background: var(--secondary-contrast-color);
     font-size: 1em;
     font-weight: bold;
     margin-top: 30px;
@@ -76,7 +88,7 @@ button{
     cursor: pointer;
 }
 button:hover{
-    background: #6d44b8;
+    background: var(--main-contrast-color);
 }
 .login{
     height: 460px;
@@ -86,7 +98,7 @@ button:hover{
     transition: .8s ease-in-out;
 }
 .login label{
-    color: #573b8a;
+    color: var(--secondary-color);
     transform: scale(.6);
 }
 
@@ -102,14 +114,15 @@ button:hover{
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: var(--grey-color);
     overflow: hidden;
     border-radius: 20px;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    display: inline-block;
+    float: left;
+    left: 50%;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -125,6 +138,6 @@ button:hover{
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: var(--secondary-contrast-color);
     color: white;
 }
