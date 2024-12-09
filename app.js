@@ -78,8 +78,10 @@ app.post('/login', async (req, res) => {
         const result = await pool.query(query, values);
         console.log("Result:", result.rows[0]);
         if (bcrypt.compareSync(user.password, result.rows[0].pass)) {
+            console.log("Passwords match!");
             res.json({result: 'success'});
         } else {
+            console.log("Passwords do not match!");
             res.json({result: 'fail'});
         }
     } catch(err) {
