@@ -10,12 +10,12 @@
     <input type="checkbox" id="chk" aria-hidden="true">
 
     <div class="signup">
-        <form>
+        <form id="register_form" action="">
             <label for="chk" aria-hidden="true">Sign up</label>
             <input id="reg_username" type="text" name="txt" placeholder="User name" required>
             <input id="reg_email" type="email" name="email" placeholder="Email" required>
             <input id="reg_pass" type="password" name="pass" placeholder="Password" required>
-            <button id="register_button">Sign up</button>
+            <button id="register_button" type="submit">Sign up</button>
         </form>
     </div>
 
@@ -24,15 +24,18 @@
             <label for="chk" aria-hidden="true">Login</label>
             <input type="email" name="email" placeholder="Email" required="">
             <input type="password" name="pswd" placeholder="Password" required="">
-            <button>Login</button>
+            <button type="submit">Login</button>
         </form>
     </div>
 </div>
 
 <script>
-    const register_button = document.getElementById('register_button');
+    const register_form = document.getElementById('register_form');
 
-    register_button.addEventListener('click', async _ => {
+    register_form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        console.log('Submitting...');
+        console.log(e)
         try {
             const response = await fetch('/register', {
                 method: 'POST',
