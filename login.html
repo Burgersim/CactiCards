@@ -3,10 +3,17 @@
 <head>
     <title>CactiCards Login</title>
     <link rel="stylesheet" type="text/css" href="css/slide navbar style.css">
+    <link rel="stylesheet" type="text/css" href="css/topnav.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="main">
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="login.html">Register|Login</a>
+        <a href="cardList.html">List of Cards</a>
+        <a href="#">Shop</a>
+    </div>
     <input type="checkbox" id="chk" aria-hidden="true">
 
     <div class="signup">
@@ -22,8 +29,8 @@
     <div class="login">
         <form id="login_form" action="">
             <label for="chk" aria-hidden="true">Login</label>
-            <input id="login_email" type="email" name="email" placeholder="Email" required="">
-            <input id=login_pass"" type="password" name="pswd" placeholder="Password" required="">
+            <input id="login_email" type="email" name="email" placeholder="Email" required>
+            <input id="login_pass" type="password" name="pswd" placeholder="Password" required>
             <button id="login_button" type="submit">Login</button>
         </form>
     </div>
