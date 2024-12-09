@@ -77,10 +77,16 @@ app.post('/login', async (req, res) => {
         const values = [user.email];
         const result = await pool.query(query, values);
         console.log("Result:", result.rows[0]);
+        if (bcrypt.compareSync(user.password, result.rows[0].pass)) {
+            res.json({result: 'success'});
+        } else {
+            res.json({result: 'fail'});
+        }
     } catch(err) {
         console.error('Error occurred:', err);
         res.status(500).send('An error occurred while logging in the user.');
     }
+
 })
 
 // Listening to requests
