@@ -11,7 +11,7 @@
 }
 
 body{
-    background: linear-gradient(to bottom, var(--main-color), var(--secondary-color), var(--tertiary-color), var(--secondary-color), var(--main-color));
+    background: linear-gradient(to bottom, var(--main-color), var(--secondary-color), var(--secondary-color), var(--main-color));
     color: #fff;
     font-family: var(--main-font), sans-serif;
     height: 100vh;
