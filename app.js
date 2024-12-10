@@ -8,6 +8,11 @@ const saltRounds = 10;
 
 const app = express();
 const port = 3000;
+const pages = [
+    ["/", "public/html/index.html"],
+    ["/login", "public/html/login.html"],
+    ["/cardList", "public/html/cardList.html"],
+]
 
 const pool = new Pool({
     user: 'cacticards_app_db_user',
@@ -24,6 +29,16 @@ app.use(BodyParser.urlencoded({extended: false}));
 app.use(express.json());
 app.use(morgan('dev'));
 
+// Generic Page Handler Loop
+pages.forEach(pages =>{
+    // GET method route
+    app.get(pages[0], (req, res) => {
+      res.sendFile(__dirname + "/" + pages[1])
+    })
+  })
+  
+  
+/*
 // Setup Route Handler
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/html/index.html'));
@@ -38,6 +53,7 @@ app.get('/login', (req, res) => {
 app.get('/cardList', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/html/cardList.html'));
 });
+*/
 
 // Route Handler to get List of Cards
 app.get('/cards', (req, res) => {
