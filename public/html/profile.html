@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>List of all Cards</title>
+    <title>User Profile</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="public\html\resources\stylesheets\style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -11,22 +11,22 @@
 <div class="topnav">
     <a href="/">Home</a>
     <a href="login">Register|Login</a>
-    <a href="profile">Profile</a>
-    <a class="active" href="cardList">List of Cards</a>
+    <a class="active" href="profile">Profile</a>
+    <a href="cardList">List of Cards</a>
     <a href="#">Shop</a>
 </div>
-<h1>List of available Cards</h1>
-<p>The following Cards are available in the Database:</p>
-<div id="cards_list"></div>
+<h1>User Profile</h1>
+<p>The user is in possession of following cards:</p>
+<div id="collected_cards"></div>
 <script>
     // fetch data via requests
-    fetch('/cards')
+    fetch('/collected_cards')
         .then(response => response.json())
         .then(data => {
             const cardList = data.map(
                 card => `<li>${card.card_id}: ${card.card_name}</li>`
             ).join('');
-            document.getElementById('cards_list').innerHTML = `<ul>${cardList}</ul>`;
+            document.getElementById('collected_cards').innerHTML = `<ul>${cardList}</ul>`;
         })
         .catch(error => console.error('Error occurred:', error));
 </script>

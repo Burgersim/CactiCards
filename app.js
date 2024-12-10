@@ -70,6 +70,21 @@ app.get('/cards', (req, res) => {
     });
 });
 
+// Route Handler to get Collected Cards
+app.get('/collected_cards', (req, res) => {
+    const query = 'SELECT * FROM collected_cards WHERE user_id = 1003';
+
+    pool.query(query, (error, result) => {
+        if (error) {
+            console.error('Error occurred:', error);
+            res.status(500).send('An error occurred while retrieving data from the database.');
+        } else {
+            const cards = result.rows;
+            res.json(cards);
+        }
+    });
+});
+
 // Route Handler for registering new users
 app.post('/register', async (req, res) => {
     console.log("Register Request:", req.body);
