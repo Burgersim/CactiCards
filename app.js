@@ -26,12 +26,12 @@ app.use(morgan('dev'));
 
 // Setup Route Handler
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public/html/index.html'));
 });
 
 // Route Handler to Login/Register Page
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'login.html'));
+    res.sendFile(path.join(__dirname, 'public/html/login.html'));
 });
 
 // Route Handler to get List of Cards
@@ -90,6 +90,13 @@ app.post('/login', async (req, res) => {
     }
 
 })
+
+// Everything else
+// Handling non matching request from the client 
+app.use((req, res, next) => { 
+    res.status(404).send( 
+        "<h1>Page not found on the server</h1>") 
+}) 
 
 // Listening to requests
 app.listen(port, () => {
