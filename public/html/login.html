@@ -79,7 +79,7 @@
                 }
             });
             console.log('Completed!', response);
-            document.getElementById(registered_label).hidden = false;
+            document.getElementById(registered_label).removeAttribute(hidden);
     } catch (err) {
             console.error('Error: ', err)
         }
