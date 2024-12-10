@@ -73,7 +73,10 @@ app.get('/cards', (req, res) => {
 
 // Route Handler to get Collected Cards
 app.get('/collected_cards', (req, res) => {
-    const query = 'SELECT * FROM collected_cards WHERE user_id = 1003';
+    const query = 'SELECT * FROM collected_cards cc' +
+    ' JOIN cards' + 
+    ' ON cc.card_id = cards.card_id' +
+    ' WHERE user_id = 1003';
 
     pool.query(query, (error, result) => {
         if (error) {
