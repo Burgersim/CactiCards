@@ -11,6 +11,7 @@ const port = 3000;
 const pages = [
     ["/", "public/html/index.html"],
     ["/login", "public/html/login.html"],
+    ["/profile", "public/html/profile.html"],
     ["/cardList", "public/html/cardList.html"],
 ]
 
