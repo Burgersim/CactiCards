@@ -20,7 +20,6 @@
         <div class="signup">
             <form id="register_form" action="">
                 <label for="chk" aria-hidden="true">Sign up</label>
-                <div id="registered_label" style="visibility: hidden;">User registered</div>
                 <input id="reg_username" type="text" name="txt" placeholder="User name" required>
                 <input id="reg_email" type="email" name="email" placeholder="Email" required>
                 <input id="reg_pass" type="password" name="pass" placeholder="Password" required>
@@ -79,7 +78,6 @@
                 }
             });
             console.log('Completed!', response);
-            document.getElementById(registered_label).style.visibility="visible";
     } catch (err) {
             console.error('Error: ', err)
         }
