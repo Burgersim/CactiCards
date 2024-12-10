@@ -138,7 +138,3 @@ button:hover{
     background-color: var(--secondary-contrast-color);
     color: white;
 }
-
-.inner_nav{
-    margin: auto
-}
