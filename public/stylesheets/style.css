@@ -161,8 +161,8 @@ button:hover{
     padding: 3em;
     border-radius: 15px;
     box-shadow: 5px 20px 50px #000;
-    background-image: linear-gradient(to bottom, var(--tertiary-color), var(--secondary-color), var(--main-color));
+    background-color: var(--tertiary-color);
     background-repeat: repeat;
-    background-size: 1000px 100%;
     min-height: 50%;
+    margin-bottom: 3em;
 }
