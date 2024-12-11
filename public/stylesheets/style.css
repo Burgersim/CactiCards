@@ -36,7 +36,7 @@ body{
     height: 500px;
     background: red;
     overflow: hidden;
-    background-image: linear-gradient(to bottom, var(--tertiary-color), var(--secondary-contrast-color), var(--main-color));
+    background-image: linear-gradient(to bottom, var(--tertiary-color), var(--secondary-color), var(--main-color));
     border-radius: 10px;
     box-shadow: 5px 20px 50px #000;
 }
