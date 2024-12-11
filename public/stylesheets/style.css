@@ -115,9 +115,8 @@ button:hover{
     background-color: var(--grey-color);
     overflow: hidden;
     border-radius: 15px;
-    width: 90%;
+    width: calc(80% + 3em);
     margin: auto;
-    padding: 0 3em;
 }
 
 /* Style the links inside the navigation bar */
