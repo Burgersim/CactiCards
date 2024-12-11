@@ -13,6 +13,7 @@
 body{
     background-image: url("../images/cactusBg.jpg");
     background-repeat: repeat;
+    background-size: 30%;
     color: #fff;
     font-family: var(--main-font), sans-serif;
     height: 100vh;
