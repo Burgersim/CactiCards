@@ -149,7 +149,8 @@ button:hover{
     background-repeat: no-repeat;
     background-position: center center;
     height: 250px;
-    float: left;
+    float: none;
+    display: inline-block;
 }
 
 .content {
@@ -158,6 +159,7 @@ button:hover{
     padding: 3em;
     border-radius: 15px;
     background-color: var(--tertiary-contrast-color);
-    float: left;
+    float: none;
     color: black;
+    display: inline-block;
 }
