@@ -11,7 +11,8 @@
 }
 
 body{
-    background: linear-gradient(to bottom, var(--main-color), var(--secondary-color), var(--secondary-color), var(--main-color));
+    background-image: url("../images/cactusBg.jpg");
+    background-repeat: repeat;
     color: #fff;
     font-family: var(--main-font), sans-serif;
     height: 100vh;
