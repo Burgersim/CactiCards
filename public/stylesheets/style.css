@@ -115,6 +115,7 @@ button:hover{
     background-color: var(--grey-color);
     overflow: hidden;
     border-radius: 15px;
+    width: 80%;
 }
 
 /* Style the links inside the navigation bar */
