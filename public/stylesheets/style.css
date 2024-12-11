@@ -146,4 +146,5 @@ button:hover{
     background-image: url("../images/cactiCardsLogo.png");
     background-repeat: no-repeat;
     background-position: center center;
+    height: 250px;
 }
