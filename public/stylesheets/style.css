@@ -115,7 +115,7 @@ button:hover{
     background-color: var(--grey-color);
     overflow: hidden;
     border-radius: 15px;
-    width: calc(80% + 3em);
+    width: calc(80% + 6em);
     margin: auto;
 }
 
