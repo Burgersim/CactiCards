@@ -160,6 +160,6 @@ button:hover{
     padding: 3em;
     border-radius: 15px;
     background-color: var(--tertiary-contrast-color);
-    color: black;
     box-shadow: 5px 20px 50px #000;
+    background-image: linear-gradient(to bottom, var(--tertiary-color), var(--secondary-color), var(--main-color));
 }
