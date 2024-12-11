@@ -25,6 +25,7 @@ const pool = new Pool({
 
 app.use(express.static(path.join('')));
 app.use(BodyParser.urlencoded({extended: false}));
+app.use(express.static('public'));
 
 //Middleware to pass json bodies
 app.use(express.json());
