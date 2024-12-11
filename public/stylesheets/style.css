@@ -138,3 +138,8 @@ button:hover{
     background-color: var(--secondary-contrast-color);
     color: white;
 }
+
+.logo {
+    width: 50%;
+    margin: auto;
+}
