@@ -118,6 +118,7 @@ button:hover{
     border-radius: 15px;
     width: calc(80% + 6em);
     margin: auto;
+    box-shadow: 5px 20px 50px #000;
 }
 
 /* Style the links inside the navigation bar */
@@ -159,4 +160,5 @@ button:hover{
     border-radius: 15px;
     background-color: var(--tertiary-contrast-color);
     color: black;
+    box-shadow: 5px 20px 50px #000;
 }
