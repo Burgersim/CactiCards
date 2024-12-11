@@ -116,6 +116,7 @@ button:hover{
     overflow: hidden;
     border-radius: 15px;
     width: 80%;
+    margin: 3em auto;
 }
 
 /* Style the links inside the navigation bar */
@@ -148,6 +149,7 @@ button:hover{
     background-repeat: no-repeat;
     background-position: center center;
     height: 250px;
+    float: none;
 }
 
 .content {
@@ -155,4 +157,5 @@ button:hover{
     margin: auto;
     border-radius: 15px;
     background-color: var(--tertiary-contrast-color);
+    float: none;
 }
