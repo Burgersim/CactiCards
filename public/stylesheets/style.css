@@ -152,4 +152,6 @@ button:hover{
 .content {
     width: 80%;
     margin: auto;
+    border-radius: 15px;
+    background-color: var(--tertiary-contrast-color);
 }
